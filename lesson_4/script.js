@@ -1,12 +1,16 @@
 // logic string
-// indexOf, includes, startsWith, endsWith
+// indexOf
 
 // Boolean
+// Types to Boolean
 // if/else
 // >=; ===; !==;
 // &&, ||
-// confirm
+
+// includes, startsWith, endsWith
 // isNaN
+
+// confirm
 
 // switch/case
 
