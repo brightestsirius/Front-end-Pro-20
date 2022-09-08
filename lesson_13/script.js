@@ -6,3 +6,4 @@
 // object
 // this
 // prototype
+// class
