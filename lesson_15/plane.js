@@ -31,6 +31,6 @@ let Yak_52 = new Aerobatics(`Yak`, 52, 2);
 console.log(Extra_330);
 console.log(Yak_52);
 
-        Plane
+//         Plane
 
-Aerobatics   Airliner
+// Aerobatics   Airliner
