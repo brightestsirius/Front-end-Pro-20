@@ -6,16 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 19</title>
     <style>
+        body{
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .block{
             width: 100px;
             height: 100px;
             background: crimson;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .block__second{
+            width: 70px;
+            height: 70px;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block__third{
+            width: 40px;
+            height: 40px;
+            background: pink;
+        }
+
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: crimson;
+            margin-bottom: 10px;
+        }
+
+        .active{
+            border: 10px solid green;
+        }
+
+        .block[name="cat"]{
+            border: 10px solid black;
+        }
+
+        .block[data-dog="Patron"]{
+            border-color: orange;
+        }
+
+        .block[data-sale]{
+            border-color: green;
         }
     </style>
 </head>
 <body>
 
     <div class="block" id="block"></div>
+    <!-- <div class="circle" id="circle"></div> -->
     
     <script src="script.js"></script>
 </body>
