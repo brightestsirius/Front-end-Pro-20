@@ -1,0 +1,46 @@
+.joke__form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+.joke__form > label{
+    margin-bottom: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.container__jokes{
+    width: 50%;
+    padding: 10px;
+}
+
+.container__jokes--form{
+    background: #dfdfdf;
+}
+
+.container__jokes--fav{
+    background: #b5c1ff;
+}
+
+.joke{
+    background: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.joke p{
+    margin: 0 0 5px 0;
+}
+
+.joke:last-of-type{
+    margin-bottom: 0;
+}
