@@ -1,0 +1,16 @@
+.block{
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    margin: 10px;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
