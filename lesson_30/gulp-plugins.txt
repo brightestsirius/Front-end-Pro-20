@@ -1,0 +1,11 @@
+node-static
+
+gulp-file-include
+gulp-dart-sass
+gulp-autoprefixer
+gulp-clean-css
+gulp-sourcemaps
+gulp-uglify
+gulp-mode
+browser-sync
+del (v.6.0.0)
