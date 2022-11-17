@@ -1,0 +1,10 @@
+$color__main: orange
+
+input
+    color: blue
+    &::placeholder
+        color: $color__main
+        transition: .2s
+    &:focus
+        &::placeholder
+            color: transparent

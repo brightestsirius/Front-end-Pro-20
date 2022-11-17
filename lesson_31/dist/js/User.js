@@ -1,0 +1,1 @@
+export default class User{constructor(e){Object.assign(this,e)}getName(){return"Hello, my name is "+this.name}}
