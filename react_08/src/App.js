@@ -1,10 +1,12 @@
 import React from 'react'
 import CountryWeather from './components/CountryWeather'
 
+import Container from '@mui/material/Container';
+
 export default function App() {
   return (
-    <div>
+    <Container maxWidth="sm">
       <CountryWeather />
-    </div>
+    </Container>
   )
 }

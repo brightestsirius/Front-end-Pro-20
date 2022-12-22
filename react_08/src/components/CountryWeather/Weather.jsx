@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
-import { getWeatherByCity, getWeatherByCityUnits } from "./../../services/weatherService";
+import {
+  getWeatherByCity,
+  getWeatherByCityUnits,
+} from "./../../services/weatherService";
 
 import SelectUnits from "./SelectUnits";
+import WeatherTable from "./WeatherTable";
+
+import Typography from "@mui/material/Typography";
 
 export default function Weather({ country }) {
   const [weather, setWeather] = useState();
@@ -27,21 +33,12 @@ export default function Weather({ country }) {
   const liftingUnits = (value) => setUnits(value);
 
   return weather ? (
-    <div>
-      <h3>
+    <Fragment>
+      <Typography variant="h6" gutterBottom>
         Weather in {country.capital[0]}, {country.name.common} {country.flag}
-      </h3>
+      </Typography>
       <SelectUnits liftingUnits={liftingUnits} />
-      <table>
-        <tbody>
-          {Object.keys(weather.main).map((key, index) => (
-            <tr key={index}>
-              <td>{key}</td>
-              <td>{weather.main[key]}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+      <WeatherTable weather={weather} />
+    </Fragment>
   ) : undefined;
 }

@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 
 import { getCountriesByRegion } from "./../../services/countryService";
 
+import TextField from "@mui/material/TextField";
+import MenuItem from "@mui/material/MenuItem";
+
 export default function SelectCountry({ region, liftingCountry }) {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState();
@@ -22,15 +25,18 @@ export default function SelectCountry({ region, liftingCountry }) {
   const handleSelect = (e) => setCountry(countries[e.target.value]);
 
   return countries.length ? (
-    <label>
-      Select country:{" "}
-      <select onChange={handleSelect}>
-        {countries.map((item, index) => (
-          <option key={index} value={index}>
-            {item.flag} {item.name.common}
-          </option>
-        ))}
-      </select>
-    </label>
+    <TextField
+      select
+      label="Select country"
+      helperText="Select country"
+      onChange={handleSelect}
+      defaultValue=""
+    >
+      {countries.map((item, index) => (
+        <MenuItem key={index} value={index}>
+          {item.flag} {item.name.common}
+        </MenuItem>
+      ))}
+    </TextField>
   ) : undefined;
 }

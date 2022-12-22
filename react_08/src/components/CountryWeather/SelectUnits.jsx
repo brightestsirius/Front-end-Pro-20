@@ -6,6 +6,9 @@ import {
   UNIT_METRIC,
 } from "./../../constants/weather";
 
+import TextField from "@mui/material/TextField";
+import MenuItem from "@mui/material/MenuItem";
+
 export default function SelectUnits({ liftingUnits }) {
   const [units, setUnits] = useState();
 
@@ -16,13 +19,15 @@ export default function SelectUnits({ liftingUnits }) {
   }, [units]);
 
   return (
-    <label>
-      Select units:
-      <select onChange={handleChange}>
-        <option value={UNIT_STANDARD}>{UNIT_STANDARD}</option>
-        <option value={UNIT_IMPERIAL}>{UNIT_IMPERIAL}</option>
-        <option value={UNIT_METRIC}>{UNIT_METRIC}</option>
-      </select>
-    </label>
+    <TextField
+      select
+      label="Select units"
+      defaultValue={UNIT_STANDARD}
+      onChange={handleChange}
+    >
+      <MenuItem value={UNIT_STANDARD}>{UNIT_STANDARD}</MenuItem>
+      <MenuItem value={UNIT_IMPERIAL}>{UNIT_IMPERIAL}</MenuItem>
+      <MenuItem value={UNIT_METRIC}>{UNIT_METRIC}</MenuItem>
+    </TextField>
   );
 }

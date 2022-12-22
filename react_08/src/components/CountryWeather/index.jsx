@@ -3,6 +3,8 @@ import SelectRegion from "./SelectRegion";
 import SelectCountry from "./SelectCountry";
 import Weather from "./Weather";
 
+import Box from "@mui/material/Box";
+
 export default function index() {
   const [region, setRegion] = useState();
   const [country, setCountry] = useState();
@@ -12,10 +14,10 @@ export default function index() {
   const liftingCountry = (value) => setCountry(value);
 
   return (
-    <div>
+    <Box sx={{width: "30ch", m: "2ch auto", '& .MuiTextField-root': { my: 1, width: 'inherit' },}}>
       <SelectRegion liftingRegion={liftingRegion} />
       <SelectCountry region={region} liftingCountry={liftingCountry} />
       <Weather country={country} />
-    </div>
+    </Box>
   );
 }

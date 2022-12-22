@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import { REGIONS } from "./../../services/countryService";
 
+import TextField from "@mui/material/TextField";
+import MenuItem from "@mui/material/MenuItem";
+
 export default function SelectRegion({ liftingRegion }) {
   const [region, setRegion] = useState();
 
@@ -12,15 +15,18 @@ export default function SelectRegion({ liftingRegion }) {
   }, [region]);
 
   return (
-    <label>
-      Select region:{" "}
-      <select onChange={handleSelect}>
-        {REGIONS.map((item, index) => (
-          <option key={index} value={item}>
-            {item}
-          </option>
-        ))}
-      </select>
-    </label>
+    <TextField
+      select
+      label="Select region"
+      helperText="Select region"
+      defaultValue=""
+      onChange={handleSelect}
+    >
+      {REGIONS.map((item, index) => (
+        <MenuItem key={index} value={item}>
+          {item}
+        </MenuItem>
+      ))}
+    </TextField>
   );
 }
