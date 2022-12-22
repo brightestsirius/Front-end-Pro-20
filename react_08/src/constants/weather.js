@@ -1,3 +1,3 @@
-export const UNIT_STANDARD = `standard`;
-export const UNIT_METRIC = `metric`;
-export const UNIT_IMPERIAL = `imperial`;
+export const UNITS_STANDARD = `standard`;
+export const UNITS_METRIC = `metric`;
+export const UNITS_IMPERIAL = `imperial`;
